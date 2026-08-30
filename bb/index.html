@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURA Photography & Films | Timeless Wedding Cinematography</title>
+    <meta name="description"
+        content="SURA Photography & Films — Minimalist, luxury wedding photography and cinematic love stories. Pure white aesthetics, editorial wedding stills, and cinema reels.">
+
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans / Montserrat (Minimal Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons for minimal luxury UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="site-body">
+
+    <!-- Subtle 35mm Film Grain Overlay -->
+    <div class="film-grain" id="filmGrain"></div>
+
+    <!-- Clean, Elegant Header Bar (White Background, Shorter/Narrower) -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <!-- Left: Hamburger Menu Button -->
+            <div class="header-left">
+                <button class="banner-menu-btn" id="bannerMenuToggle" aria-label="Open Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Center: SURA Photography Logo (Exact typography & proportions) -->
+            <div class="header-center">
+                <a href="#hero" class="brand-link" aria-label="SURA Photography Home">
+                    <img src="logo/sura-logo.png" alt="SURA Photography" class="brand-logo-img">
+                </a>
+            </div>
+
+            <!-- Right: Minimal Spacer for Perfect Centering -->
+            <div class="header-right"></div>
+        </div>
+
+        <!-- Full-Screen Side Drawer Navigation -->
+        <nav class="banner-drawer" id="bannerDrawer" aria-hidden="true">
+            <button class="banner-drawer-close" id="bannerDrawerClose" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="banner-drawer-links">
+                <a href="#hero" class="banner-nav-link">HOME</a>
+                <a href="#categories" class="banner-nav-link">CATEGORIES</a>
+                <a href="#wedding-stories" class="banner-nav-link" id="drawerWeddingStoriesLink">WEDDING STORIES</a>
+                <a href="#cinema" class="banner-nav-link">CINEMA FILMS</a>
+                <a href="#about" class="banner-nav-link">PHILOSOPHY</a>
+                <a href="#contact" class="banner-nav-link">CONTACT & INQUIRY</a>
+                <a href="#contact" class="banner-nav-link banner-nav-inquire">INQUIRE DATE</a>
+            </div>
+            <div class="banner-drawer-footer">
+                <p class="banner-drawer-tagline">Cinematic Wedding Storytelling</p>
+                <p class="banner-drawer-phone"><a href="tel:+251945255053"
+                        style="color: inherit; text-decoration: none;">+251 94 525 5053</a></p>
+                <div class="banner-drawer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/suraphotopraphy_et" target="_blank" rel="noopener"
+                        aria-label="Telegram (@suraphotography_et)"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="banner-drawer-backdrop" id="bannerDrawerBackdrop"></div>
+    </header>
+
+    <main>
+        <!-- MAIN HOME PAGE VIEW CONTAINER -->
+        <div class="home-view" id="homeView">
+            <!-- Hero Section: Cinematic Full-Width Video Hero -->
+            <section class="hero-section" id="hero">
+                <!-- Primary hero video background -->
+                <div class="hero-video-wrapper">
+                    <video id="heroVideoMain" class="hero-video" autoplay muted playsinline webkit-playsinline loop
+                        preload="auto" poster="image1/DSC01925.jpg">
+                        <source src="./image5/B+L Sura photography reel version 1.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-video-overlay"></div>
+                </div>
+
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-line"></span>
+                        <span class="eyebrow-text">SURA PHOTOGRAPHY</span>
+                        <span class="eyebrow-line"></span>
+                    </div>
+                </div>
+
+                <a href="#categories" class="hero-scroll-cue" aria-label="Scroll to Categories">
+                    <span class="scroll-cue-text">DISCOVER</span>
+                    <div class="scroll-cue-icon">
+                        <span class="scroll-line"></span>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Below-Video Action Bar -->
+            <div class="hero-below-actions">
+                <a href="#wedding-stories" class="hero-icon-btn" id="heroExploreBtn">
+                    <span class="hero-icon-btn__icon"><i class="fa-regular fa-images"></i></span>
+                    <span class="hero-icon-btn__label">Explore Stories</span>
+                </a>
+                <span class="hero-icon-btn__divider"></span>
+                <a href="#cinema" class="hero-icon-btn">
+                    <span class="hero-icon-btn__icon"><i class="fa-solid fa-play"></i></span>
+                    <span class="hero-icon-btn__label">Watch Cinematic Reel</span>
+                </a>
+            </div>
+
+            <!-- Categories Section (Horizontal & Clean Grid) -->
+            <section class="categories-section" id="categories">
+                <div class="container">
+                    <!-- Intro Statement -->
+                    <div class="section-intro-wrap">
+                        <p class="section-intro-statement"><span class="intro-line">I craft timeless, evocative films of
+                                luxury events worldwide,</span><span class="intro-line">capturing both cinematic moments
+                                and elegant photography.</span></p>
+                    </div>
+
+                    <!-- 6 Category Cards Showcase -->
+                    <div class="categories-grid">
+
+                        <!-- Category 1: Shemgelna -->
+                        <article class="category-card" data-category="shemgelna" tabindex="0">
+                            <div class="category-image-wrap">
+                                <img src="image6/IMG_9860.JPG" alt="Shemgelna Traditional Ceremony"
+                                    class="category-image" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title-clean">Shemgelna</h3>
+                            </div>
+                        </article>
+
+                        <!-- Category 2: Bridal -->
+                        <article class="category-card" data-category="bridal" tabindex="0">
+                            <div class="category-image-wrap">
+                                <img src="image4/IMG_8819.JPG" alt="Bridal Elegance and Preparations"
+                                    class="category-image" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title-clean">Bridal</h3>
+                            </div>
+                        </article>
+
+                        <!-- Category 3: Wedding -->
+                        <article class="category-card" data-category="wedding" id="weddingCategoryCard" tabindex="0">
+                            <div class="category-image-wrap">
+                                <img src="image1/DSC01925.jpg" alt="Wedding Grand Celebrations - Binyam & Liya"
+                                    class="category-image" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title-clean">Wedding</h3>
+                            </div>
+                        </article>
+
+                        <!-- Category 4: Pre-Wedding -->
+                        <article class="category-card" data-category="pre-wedding" tabindex="0">
+                            <div class="category-image-wrap">
+                                <img src="image2/DSC06072.jpg" alt="Pre-Wedding Romantic Session" class="category-image"
+                                    loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title-clean">Pre-Wedding</h3>
+                            </div>
+                        </article>
+
+                        <!-- Category 5: Church Wedding -->
+                        <article class="category-card" data-category="church" tabindex="0">
+                            <div class="category-image-wrap">
+                                <img src="image3/DSC02994.jpg" alt="Sacred Cathedral & Church Vows"
+                                    class="category-image" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title-clean">Church Wedding</h3>
+                            </div>
+                        </article>
+
+                        <!-- Category 6: Event -->
+                        <article class="category-card" data-category="event" tabindex="0">
+                            <div class="category-image-wrap">
+                                <img src="image2/DSC07321.jpg" alt="Luxury Celebration & Event Moments"
+                                    class="category-image" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title-clean">Event</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Refined Visual Separator with Film Strip Motif -->
+            <div class="film-divider-section" aria-hidden="true">
+                <div class="film-divider-track">
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                    <div class="film-divider-badge">
+                        <i class="fa-solid fa-film"></i>
+                        <span>SURA MOTION PICTURE ARCHIVE • 24 FPS KODAK EMULSION</span>
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                    <span class="film-sprocket"></span>
+                </div>
+            </div>
+
+            <!-- Cinema Video Showcase Section (Real Local Video Reels) -->
+            <section class="cinema-section" id="cinema">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2 class="section-heading">Cinematic Wedding Films</h2>
+                    </div>
+
+                    <!-- Cinema Video Grid -->
+                    <div class="cinema-grid">
+
+                        <!-- Video 1: Wedding Cinema Reel -->
+                        <article class="cinema-card" data-video-src="image5/final reel version 1.mp4"
+                            data-video-title="Wedding Cinema Highlight Reel" data-video-category="Wedding">
+                            <div class="video-thumbnail-wrap">
+                                <video class="video-preview" preload="metadata" muted playsinline loop>
+                                    <source src="image5/final reel version 1.mp4#t=1.0" type="video/mp4">
+                                </video>
+                                <div class="video-overlay-tint"></div>
+                                <div class="play-button-circle">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="cinema-card-info">
+                                <h3 class="cinema-title">Grand Wedding Cinematic Reel</h3>
+                            </div>
+                        </article>
+
+                        <!-- Video 2: Pre-Wedding Love Story -->
+                        <article class="cinema-card" data-video-src="image5/hook reel short.mp4"
+                            data-video-title="Intimate Pre-Wedding Reel" data-video-category="Pre-Wedding">
+                            <div class="video-thumbnail-wrap">
+                                <video class="video-preview" preload="metadata" muted playsinline loop>
+                                    <source src="image5/hook reel short.mp4#t=1.0" type="video/mp4">
+                                </video>
+                                <div class="video-overlay-tint"></div>
+                                <div class="play-button-circle">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="cinema-card-info">
+                                <h3 class="cinema-title">Pre-Wedding Romance Story</h3>
+                            </div>
+                        </article>
+
+                        <!-- Video 3: Shemgelna Traditional Ceremony -->
+                        <article class="cinema-card" data-video-src="image5/B+L Sura photography reel version 1.mp4"
+                            data-video-title="B+L Shemgelna Cultural Film" data-video-category="Shemgelna">
+                            <div class="video-thumbnail-wrap">
+                                <video class="video-preview" preload="metadata" muted playsinline loop>
+                                    <source src="image5/B+L Sura photography reel version 1.mp4#t=1.0" type="video/mp4">
+                                </video>
+                                <div class="video-overlay-tint"></div>
+                                <div class="play-button-circle">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="cinema-card-info">
+                                <h3 class="cinema-title">Shemgelna Tradition & Joy</h3>
+                            </div>
+                        </article>
+
+                        <!-- Video 4: Feature Wedding Project Film -->
+                        <article class="cinema-card cinema-card-wide" data-video-src="image5/final project.mp4"
+                            data-video-title="Master Wedding Feature Film" data-video-category="Feature Film">
+                            <div class="video-thumbnail-wrap">
+                                <video class="video-preview" preload="metadata" muted playsinline loop>
+                                    <source src="image5/final project.mp4#t=1.0" type="video/mp4">
+                                </video>
+                                <div class="video-overlay-tint"></div>
+                                <div class="play-button-circle">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="cinema-card-info">
+                                <h3 class="cinema-title">The Complete Wedding Symphony</h3>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Artistry & Philosophy Section -->
+            <section class="about-section" id="about">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-images">
+                            <div class="about-img-frame frame-main">
+                                <img src="image1/DSC02750.jpg" alt="SURA Wedding Photography Aesthetics" loading="lazy">
+                            </div>
+                            <div class="about-img-frame frame-accent">
+                                <img src="image2/DSC06318.jpg" alt="Wedding Ring Details and Moments" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="about-text-col">
+                            <span class="section-eyebrow">OUR ARTISTIC PHILOSOPHY</span>
+                            <h2 class="section-heading">We believe wedding photography should feel like poetry, not a
+                                photoshoot.</h2>
+                            <p class="about-paragraph">
+                                Inspired by classic European cinema and the rich vibrancy of Ethiopian cultural
+                                celebrations, SURA creates
+                                timeless visual heirlooms. We prioritize authentic human connection over stiff poses.
+                            </p>
+
+                            <div class="philosophy-points">
+                                <div class="point-item">
+                                    <div class="point-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                    <div>
+                                        <h4 class="point-title">Organic Natural Light</h4>
+                                        <p class="point-desc">We work with the sun, candle glow, and ambient atmosphere
+                                            for unforced, romantic
+                                            imagery.</p>
+                                    </div>
+                                </div>
+
+                                <div class="point-item">
+                                    <div class="point-icon"><i class="fa-solid fa-video"></i></div>
+                                    <div>
+                                        <h4 class="point-title">35mm Filmic Color Grading</h4>
+                                        <p class="point-desc">Custom tailored color profiles with Kodak Portra warmth
+                                            and creamy skin tones
+                                            that will never go out of style.</p>
+                                    </div>
+                                </div>
+
+                                <div class="point-item">
+                                    <div class="point-icon"><i class="fa-solid fa-gem"></i></div>
+                                    <div>
+                                        <h4 class="point-title">Discreet Documentary Approach</h4>
+                                        <p class="point-desc">Unobtrusive presence that allows you to fully live in the
+                                            magic of your day
+                                            while we preserve every secret glance.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-stats">
+                                <div class="stat-box">
+                                    <span class="stat-number">150+</span>
+                                    <span class="stat-label">Weddings Documented</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-number">8+</span>
+                                    <span class="stat-label">Years of Mastery</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Tailored Cinema</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prominent Contact & Date Inquiry Section (Front Page) -->
+            <section class="contact-section" id="contact">
+                <div class="container">
+                    <div class="contact-card">
+                        <div class="contact-grid">
+
+                            <!-- Contact Left Column: Studio Information -->
+                            <div class="contact-info-col">
+                                <span class="section-eyebrow">RESERVATIONS & INQUIRIES</span>
+                                <h2 class="contact-heading">Let’s Create Something Unforgettable.</h2>
+                                <div class="contact-details-list">
+                                    <div class="detail-item">
+                                        <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                        <div>
+                                            <span class="detail-label">STUDIO LOCATION</span>
+                                            <p class="detail-value">Bole & Kazanchis, Addis Ababa, Ethiopia<br><small
+                                                    class="text-muted">Available for destination weddings
+                                                    worldwide</small></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="detail-item">
+                                        <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                        <div>
+                                            <span class="detail-label">DIRECT PHONE & WHATSAPP</span>
+                                            <p class="detail-value"><a href="tel:+251945255053">+251 94 525 5053</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="detail-item">
+                                        <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                        <div>
+                                            <span class="detail-label">DIRECT INQUIRIES</span>
+                                            <p class="detail-value"><a
+                                                    href="mailto:contact@suraphotography.com">contact@suraphotography.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="detail-item">
+                                        <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+                                        <div>
+                                            <span class="detail-label">RESPONSE TIME</span>
+                                            <p class="detail-value">Within 24 hours (Monday – Saturday)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contact-socials">
+                                    <span class="socials-label">FOLLOW OUR LATEST FILMS:</span>
+                                    <div class="social-links">
+                                        <a href="https://instagram.com" target="_blank" rel="noopener"
+                                            class="social-icon" aria-label="Instagram"><i
+                                                class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://t.me/suraphotopraphy_et" target="_blank" rel="noopener"
+                                            class="social-icon" aria-label="Telegram (@suraphotography_et)"><i
+                                                class="fa-brands fa-telegram"></i></a>
+                                        <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon"
+                                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                        <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-icon"
+                                            aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Right Column: Minimalist Elegant Form -->
+                            <div class="contact-form-col">
+                                <form class="inquiry-form" id="weddingInquiryForm" novalidate>
+                                    <h3 class="form-title">Check Date & Request Investment Guide</h3>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="clientName" class="form-label">YOUR FULL NAME *</label>
+                                            <input type="text" id="clientName" name="clientName" class="form-input"
+                                                placeholder="e.g. Liya Tesfaye" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="partnerName" class="form-label">PARTNER'S NAME *</label>
+                                            <input type="text" id="partnerName" name="partnerName" class="form-input"
+                                                placeholder="e.g. Binyam Kebede" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="clientEmail" class="form-label">EMAIL ADDRESS *</label>
+                                            <input type="email" id="clientEmail" name="clientEmail" class="form-input"
+                                                placeholder="liya@example.com" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="clientPhone" class="form-label">PHONE / WHATSAPP *</label>
+                                            <input type="tel" id="clientPhone" name="clientPhone" class="form-input"
+                                                placeholder="+251 9..." required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="eventDate" class="form-label">WEDDING / EVENT DATE *</label>
+                                            <input type="date" id="eventDate" name="eventDate" class="form-input"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="eventCategory" class="form-label">SERVICE OF INTEREST *</label>
+                                            <select id="eventCategory" name="eventCategory" class="form-select"
+                                                required>
+                                                <option value="" disabled selected>Select category...</option>
+                                                <option value="Full Wedding Cinema & Photography">Full Wedding Cinema &
+                                                    Photography (Complete
+                                                    Package)</option>
+                                                <option value="Wedding Day Photography">Wedding Day Photography Only
+                                                </option>
+                                                <option value="Wedding Day Cinema Film">Wedding Day Cinema Film Only
+                                                </option>
+                                                <option value="Shemgelna Ceremony">Shemgelna Traditional Ceremony
+                                                </option>
+                                                <option value="Bridal Editorial">Bridal Editorial Session</option>
+                                                <option value="Pre-Wedding Love Story">Pre-Wedding Love Story Reel &
+                                                    Stills</option>
+                                                <option value="Church Wedding">Church Wedding Ceremony</option>
+                                                <option value="Destination Wedding">Destination Wedding (Abroad /
+                                                    Remote)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="eventLocation" class="form-label">VENUE / LOCATION *</label>
+                                        <input type="text" id="eventLocation" name="eventLocation" class="form-input"
+                                            placeholder="e.g. Skylight Hotel / St. George Cathedral" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="eventStory" class="form-label">TELL US ABOUT YOUR VISION & LOVE
+                                            STORY</label>
+                                        <textarea id="eventStory" name="eventStory" rows="4" class="form-textarea"
+                                            placeholder="Share your dream aesthetic, important traditions, or special moments you want us to capture..."></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn-submit-inquiry" id="submitInquiryBtn">
+                                        <span class="btn-text">SEND INQUIRY & CHECK AVAILABILITY</span>
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </button>
+
+                                    <p class="form-disclaimer">
+                                        <i class="fa-solid fa-shield-halved"></i> Your information is kept strictly
+                                        confidential. We respond
+                                        within 24 hours.
+                                    </p>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> <!-- end #homeView -->
+
+        <!-- DEDICATED WEDDING CATEGORY SECTION: WEDDING STORIES & COUPLES -->
+        <section class="wedding-stories-view" id="weddingStoriesView" aria-hidden="true" style="display: none;">
+            <!-- Breadcrumb & Top Navigation Bar -->
+            <div class="wedding-nav-bar">
+                <div class="container wedding-nav-inner">
+                    <button class="btn-back-home" id="btnBackToHome" aria-label="Return to Home Categories">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                        <span>BACK TO CATEGORIES</span>
+                    </button>
+                    <div class="wedding-breadcrumbs">
+                        <a href="#hero" class="breadcrumb-link" id="breadcrumbHome">HOME</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="#categories" class="breadcrumb-link" id="breadcrumbCategories">CATEGORIES</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">WEDDING STORIES &amp; COUPLES</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Couple Stories Showcase Grid (All 6 Stories) -->
+            <div class="wedding-stories-container">
+                <div class="container">
+                    <div class="stories-grid" id="weddingStoriesGrid">
+
+                        <!-- Story 1: Binyam & Liya -->
+                        <div class="story-card" data-category="wedding" data-story-id="binyam-liya" tabindex="0">
+                            <div class="story-image-wrap">
+                                <img src="image1/DSC01925.jpg" alt="Binyam & Liya Wedding Portrait" class="story-image"
+                                    loading="lazy">
+                                <div class="story-hover-overlay">
+                                    <span class="story-view-prompt"><i class="fa-regular fa-images"></i> OPEN FULL
+                                        GALLERY</span>
+                                </div>
+                                <span class="story-tag">WEDDING</span>
+                            </div>
+                            <div class="story-info">
+                                <h3 class="story-title">Binyam &amp; Liya</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story 2: Dawit & Selam -->
+                        <div class="story-card" data-category="pre-wedding" data-story-id="dawit-selam" tabindex="0">
+                            <div class="story-image-wrap">
+                                <img src="image2/DSC06027.jpg" alt="Dawit & Selam Pre-Wedding Story" class="story-image"
+                                    loading="lazy">
+                                <div class="story-hover-overlay">
+                                    <span class="story-view-prompt"><i class="fa-regular fa-images"></i> OPEN FULL
+                                        GALLERY</span>
+                                </div>
+                                <span class="story-tag">PRE-WEDDING</span>
+                            </div>
+                            <div class="story-info">
+                                <h3 class="story-title">Dawit &amp; Selam</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story 3: Elias & Helen -->
+                        <div class="story-card" data-category="church" data-story-id="elias-helen" tabindex="0">
+                            <div class="story-image-wrap">
+                                <img src="image3/DSC02974.jpg" alt="Elias & Helen Church Wedding" class="story-image"
+                                    loading="lazy">
+                                <div class="story-hover-overlay">
+                                    <span class="story-view-prompt"><i class="fa-regular fa-images"></i> OPEN FULL
+                                        GALLERY</span>
+                                </div>
+                                <span class="story-tag">CHURCH WEDDING</span>
+                            </div>
+                            <div class="story-info">
+                                <h3 class="story-title">Elias &amp; Helen</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story 4: Yonas & Meron -->
+                        <div class="story-card" data-category="bridal" data-story-id="yonas-meron" tabindex="0">
+                            <div class="story-image-wrap">
+                                <img src="image4/IMG_8819.JPG" alt="Yonas & Meron Bridal Couture" class="story-image"
+                                    loading="lazy">
+                                <div class="story-hover-overlay">
+                                    <span class="story-view-prompt"><i class="fa-regular fa-images"></i> OPEN FULL
+                                        GALLERY</span>
+                                </div>
+                                <span class="story-tag">BRIDAL</span>
+                            </div>
+                            <div class="story-info">
+                                <h3 class="story-title">Yonas &amp; Meron</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story 5: Kidus & Bethlehem -->
+                        <div class="story-card" data-category="shemgelna" data-story-id="kidus-bethlehem" tabindex="0">
+                            <div class="story-image-wrap">
+                                <img src="image6/IMG_9855.JPG" alt="Kidus & Bethlehem Shemgelna Ceremony"
+                                    class="story-image" loading="lazy">
+                                <div class="story-hover-overlay">
+                                    <span class="story-view-prompt"><i class="fa-regular fa-images"></i> OPEN FULL
+                                        GALLERY</span>
+                                </div>
+                                <span class="story-tag">SHEMGELNA</span>
+                            </div>
+                            <div class="story-info">
+                                <h3 class="story-title">Kidus &amp; Bethlehem</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story 6: Abel & Sara -->
+                        <div class="story-card" data-category="wedding" data-story-id="abel-sara" tabindex="0">
+                            <div class="story-image-wrap">
+                                <img src="image2/DSC07321.jpg" alt="Abel & Sara Evening Reception" class="story-image"
+                                    loading="lazy">
+                                <div class="story-hover-overlay">
+                                    <span class="story-view-prompt"><i class="fa-regular fa-images"></i> OPEN FULL
+                                        GALLERY</span>
+                                </div>
+                                <span class="story-tag">WEDDING</span>
+                            </div>
+                            <div class="story-info">
+                                <h3 class="story-title">Abel &amp; Sara</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dedicated Bottom CTA Bar -->
+            <div class="wedding-view-cta">
+                <div class="container text-center">
+                    <span class="section-eyebrow">YOUR WEDDING CHAPTER</span>
+                    <h3 class="wedding-cta-heading">Ready to preserve your own timeless story?</h3>
+                    <p class="wedding-cta-subtext">We accept a curated number of commissions each season to maintain our
+                        uncompromising cinema standard.</p>
+                    <div class="wedding-cta-actions">
+                        <a href="#contact" class="btn btn-hero-primary wedding-inquire-btn" id="weddingCtaInquireBtn">
+                            <span>CHECK DATE AVAILABILITY</span>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                        <button class="btn btn-hero-secondary" id="btnBackToHomeSecondary">
+                            <i class="fa-solid fa-arrow-left"></i> RETURN TO CATEGORIES
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Minimalist Sommar Films Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo/sura-logo.png" alt="SURA Photography & Films Logo" class="footer-logo">
+                    <p class="footer-desc">Cinematic wedding filmmaking & photography with timeless light, pure white
+                        elegance,
+                        and authentic emotion.</p>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h5 class="footer-col-title">NAVIGATION</h5>
+                    <a href="#hero" class="footer-home-link">Home</a>
+                    <a href="#categories" class="footer-categories-link">Categories</a>
+                    <a href="#wedding-stories" class="footer-wedding-stories-link" id="footerWeddingStoriesLink">Wedding
+                        Stories</a>
+                    <a href="#cinema">Cinema Films</a>
+                    <a href="#about">Philosophy</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h5 class="footer-col-title">CATEGORIES</h5>
+                    <a href="#wedding-stories" data-quick-filter="wedding">Wedding</a>
+                    <a href="#wedding-stories" data-quick-filter="shemgelna">Shemgelna</a>
+                    <a href="#wedding-stories" data-quick-filter="bridal">Bridal</a>
+                    <a href="#wedding-stories" data-quick-filter="pre-wedding">Pre-Wedding</a>
+                    <a href="#wedding-stories" data-quick-filter="church">Church Wedding</a>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h5 class="footer-col-title">STUDIO & CONNECT</h5>
+                    <p class="footer-studio-info">Addis Ababa, Ethiopia</p>
+                    <p class="footer-studio-info">Tel: <a href="tel:+251945255053"
+                            style="color: inherit; text-decoration: none;">+251 94 525 5053</a></p>
+                    <p class="footer-studio-info">Email: contact@suraphotography.com</p>
+                    <div class="footer-social-row">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://t.me/suraphotopraphy_et" target="_blank" rel="noopener"
+                            aria-label="Telegram (@suraphotography_et)"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; <span id="currentYear">2026</span> SURA Photography & Films. All Rights
+                    Reserved.</p>
+                <p class="credit-text">Crafted with Pure White Aesthetic & 35mm Cinema Elegance.</p>
+                <a href="#hero" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i>
+                    TOP</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FULL STORY GALLERY MODAL (Dedicated Couple Archive) -->
+    <div class="gallery-modal" id="storyGalleryModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-window">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-category-badge" id="modalCategoryBadge">WEDDING</span>
+                    <h2 class="modal-story-title" id="modalStoryTitle">Binyam & Liya</h2>
+                    <span class="modal-story-subtitle" id="modalStorySubtitle">Addis Ababa • Grand Celebration</span>
+                </div>
+                <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Gallery Modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Filmic Spec Bar -->
+            <div class="modal-spec-bar">
+                <div class="spec-item"><i class="fa-solid fa-camera"></i> <span id="modalCameraSpec">35mm & 50mm f/1.2
+                        Lens</span></div>
+                <div class="spec-item"><i class="fa-solid fa-sliders"></i> <span id="modalGradeSpec">Kodak Portra
+                        Warmth</span>
+                </div>
+                <div class="spec-item"><i class="fa-regular fa-image"></i> <span id="modalPhotoCount">29 High-Res
+                        Photographs</span></div>
+            </div>
+
+            <!-- Modal Gallery Grid -->
+            <div class="modal-gallery-body">
+                <div class="modal-masonry-grid" id="modalMasonryGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FULL-SCREEN LIGHTBOX SLIDESHOW (Single Photo Inspection) -->
+    <div class="lightbox-viewer" id="lightboxViewer" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+        <div class="lightbox-toolbar">
+            <div class="lightbox-info">
+                <span id="lightboxIndex">1 / 20</span>
+                <span class="lightbox-title-text" id="lightboxPhotoTitle">SURA Archive</span>
+            </div>
+            <div class="lightbox-actions">
+                <button class="lightbox-btn" id="lightboxZoomBtn" title="Zoom in/out"><i
+                        class="fa-solid fa-magnifying-glass-plus"></i></button>
+                <button class="lightbox-btn" id="lightboxCloseBtn" title="Close Lightbox (ESC)"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+
+        <button class="lightbox-nav-btn prev-btn" id="lightboxPrevBtn" aria-label="Previous Photo">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav-btn next-btn" id="lightboxNextBtn" aria-label="Next Photo">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="lightbox-stage">
+            <img src="" alt="Full Screen Wedding Photograph" id="lightboxImage" class="lightbox-image">
+        </div>
+    </div>
+
+    <!-- CINEMA VIDEO PLAYER MODAL -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+        <div class="video-modal-container">
+
+            <div class="video-modal-header">
+                <button type="button" class="btn-video-back" id="btnVideoBack" aria-label="Return to Video Gallery">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to Gallery</span>
+                </button>
+                <div class="video-modal-title-wrap">
+                    <span class="video-modal-tag" id="videoModalTag">CINEMA 4K</span>
+                    <h3 class="video-modal-title" id="videoModalTitle">Film Showcase</h3>
+                </div>
+                <button class="video-modal-close" id="videoModalCloseBtn" aria-label="Close Video Player">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="video-player-wrapper">
+                <video id="mainCinemaPlayer" controls playsinline preload="auto">
+                    <source src="" type="video/mp4" id="cinemaVideoSource">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-modal-footer">
+                <span class="video-spec-note"><i class="fa-solid fa-clapperboard"></i> 24 FPS • Master Color Graded by
+                    SURA
+                    Films</span>
+                <button class="btn-video-inquire" id="videoInquireBtn">Book This Cinema Style</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TOAST / BOOKING NOTIFICATION MODAL -->
+    <div class="toast-modal" id="toastModal">
+        <div class="toast-card">
+            <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+            <h4 class="toast-title">Inquiry Received</h4>
+            <p class="toast-msg">Thank you! Your wedding details have been forwarded to the SURA studio team. We will
+                review
+                date availability and respond within 24 hours.</p>
+            <button class="toast-btn" id="toastCloseBtn">UNDERSTOOD</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
